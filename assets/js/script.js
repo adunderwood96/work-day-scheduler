@@ -8,7 +8,7 @@ timeClock();
 loadData();
 
 //Set interval to constantly update time
-var clock = setInterval(timeClock, 1000)
+var clock = setInterval(timeClock, 1600)
 
 //Set current time and check time blocks
 function timeClock(){
@@ -71,19 +71,19 @@ function handleClearClick(e){
 
 //Load data from local storage to each time block
 function loadData(){ 
-    $('#01 .content').val(localStorage.getItem('01'));
-    $('#02 .content').val(localStorage.getItem('02'));
-    $('#03 .content').val(localStorage.getItem('03'));
-    $('#04 .content').val(localStorage.getItem('04'));
-    $('#05 .content').val(localStorage.getItem('05'));
-    $('#06 .content').val(localStorage.getItem('06'));
-    $('#07 .content').val(localStorage.getItem('07'));
-    $('#08 .content').val(localStorage.getItem('08'));
-    $('#09 .content').val(localStorage.getItem('09'));
+    $('#7 .content').val(localStorage.getItem('7'));
+    $('#8 .content').val(localStorage.getItem('8'));
+    $('#9 .content').val(localStorage.getItem('9'));
     $('#10 .content').val(localStorage.getItem('10'));
     $('#11 .content').val(localStorage.getItem('11'));
     $('#12 .content').val(localStorage.getItem('12'));
     $('#13 .content').val(localStorage.getItem('13'));
     $('#14 .content').val(localStorage.getItem('14'));
     $('#15 .content').val(localStorage.getItem('15'));
+    $('#16 .content').val(localStorage.getItem('16'));
+    $('#17 .content').val(localStorage.getItem('17'));
+    $('#18 .content').val(localStorage.getItem('18'));
+    $('#19 .content').val(localStorage.getItem('19'));
+    $('#20 .content').val(localStorage.getItem('20'));
+    $('#21 .content').val(localStorage.getItem('21'));
 }
