@@ -1,4 +1,4 @@
-// Time Variables   
+// Time Variables (time by 24hr clock)
 
 // current time shown in header and add time blocks to color (past/pres/future)
 var timeEl = $("#currentDay");
@@ -46,7 +46,7 @@ function handleSaveClick(e){
     var time = $(e.target).parent().attr("id");
 
     if(text === "")
-        alert("To save task the text input field must not be blank!")
+        alert("To save your task the text input field must not be blank!")
     else{
         localStorage.setItem(time, text);
         alert("Task has been saved");
@@ -69,7 +69,7 @@ function handleClearClick(e){
     
 }
 
-//Load data from local storage to each time block
+//Load data from local storage to each time block (24hr clock)
 function loadData(){ 
     $('#7 .description').val(localStorage.getItem('7'));
     $('#8 .description').val(localStorage.getItem('8'));
