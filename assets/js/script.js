@@ -17,7 +17,7 @@ function timeClock(){
     checkTimeBlock();
 }
 
-//Color coordinate time blocks based on current time
+// coordinate the color of time blocks based on current time
 function checkTimeBlock(){
     var currentHour = currentTime.hours();
     var timeBlock = $(".time-block");
@@ -39,15 +39,14 @@ function checkTimeBlock(){
 }
 
 //Save button click listener
-$(".saveBtn").on("click", saveClick);
+$(".saveBtn").on("click", handleSaveClick);
 
-//Save input to local storage
-function saveClick(event){
-    var text = $(event.target).siblings(".content").val();
-    var time = $(event.target).parent().attr("id");
+function handleSaveClick(e){
+    var text = $(e.target).siblings(".content").val();
+    var time = $(e.target).parent().attr("id");
 
     if(text === "")
-        alert("To save schedule input text content into the box")
+        alert("To save task the text input field must not be blank!")
     else{
         localStorage.setItem(time, text);
         alert("Task has been saved");
@@ -56,12 +55,12 @@ function saveClick(event){
 }
 
 //Clear button click listener
-$(".clearBtn").on("click", clearClick);
+$(".clearBtn").on("click", handleClearClick);
 
 //Save input to local storage
-function clearClick(event){
+function handleClearClick(e){
     
-    var clear = confirm("Are you sure you want to clear your day calendar");
+    var clear = confirm("Click ok if you would like to clear the schedule");
 
     if(clear){
         localStorage.clear();
