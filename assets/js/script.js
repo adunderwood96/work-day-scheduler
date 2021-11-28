@@ -1,17 +1,17 @@
 // Time Variables   
 
-//Set current time to header and check time blocks to color them
+// current time shown in header and add time blocks to color (past/pres/future)
 var timeEl = $("#currentDay");
 var currentTime;
-clockUpdater();
+timeClock();
 //Load data from local storage on start
 loadData();
 
-//Set interval to constanstly update time
-var clock = setInterval(clockUpdater, 1000)
+//Set interval to constantly update time
+var clock = setInterval(timeClock, 1000)
 
 //Set current time and check time blocks
-function clockUpdater(){
+function timeClock(){
     currentTime = moment();
     timeEl.text(currentTime);
     checkTimeBlock();
@@ -47,7 +47,7 @@ function saveClick(event){
     var time = $(event.target).parent().attr("id");
 
     if(text === "")
-        alert("Type text into the field to save it on the calendar")
+        alert("To save schedule input text content into the box")
     else{
         localStorage.setItem(time, text);
         alert("Task has been saved");
@@ -72,13 +72,19 @@ function clearClick(event){
 
 //Load data from local storage to each time block
 function loadData(){ 
-    $('#9 .content').val(localStorage.getItem('9'));
+    $('#01 .content').val(localStorage.getItem('01'));
+    $('#02 .content').val(localStorage.getItem('02'));
+    $('#03 .content').val(localStorage.getItem('03'));
+    $('#04 .content').val(localStorage.getItem('04'));
+    $('#05 .content').val(localStorage.getItem('05'));
+    $('#06 .content').val(localStorage.getItem('06'));
+    $('#07 .content').val(localStorage.getItem('07'));
+    $('#08 .content').val(localStorage.getItem('08'));
+    $('#09 .content').val(localStorage.getItem('09'));
     $('#10 .content').val(localStorage.getItem('10'));
     $('#11 .content').val(localStorage.getItem('11'));
     $('#12 .content').val(localStorage.getItem('12'));
     $('#13 .content').val(localStorage.getItem('13'));
     $('#14 .content').val(localStorage.getItem('14'));
     $('#15 .content').val(localStorage.getItem('15'));
-    $('#16 .content').val(localStorage.getItem('16'));
-    $('#17 .content').val(localStorage.getItem('17'));
 }

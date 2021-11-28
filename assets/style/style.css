@@ -53,24 +53,30 @@ textarea {
 }
 
 .past {
-  background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
+  background-image: linear-gradient(
+    to right,
+    #f78ca0 0%,
+    #f9748f 19%,
+    #fd868c 60%,
+    #fe9a8b 100%
+  );
   color: white;
 }
 
 .present {
-  background-image: linear-gradient(to top, #feada6 0%, #f5efef 100%);  
+  background-image: linear-gradient(to top, #feada6 0%, #f5efef 100%);
   color: white;
 }
 
 .future {
-  background-image: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);  
+  background-image: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
   color: white;
 }
 
 .saveBtn {
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
-  background-color: thistle;
+  background-color: rgb(105, 162, 180);
   border: none;
   color: white;
 }
