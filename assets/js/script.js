@@ -1,3 +1,5 @@
+// Time Variables   
+
 //Set current time to header and check time blocks to color them
 var timeEl = $("#currentDay");
 var currentTime;
@@ -5,7 +7,7 @@ clockUpdater();
 //Load data from local storage on start
 loadData();
 
-//Set interval to  update time
+//Set interval to constanstly update time
 var clock = setInterval(clockUpdater, 1000)
 
 //Set current time and check time blocks
@@ -18,7 +20,7 @@ function clockUpdater(){
 //Color coordinate time blocks based on current time
 function checkTimeBlock(){
     var currentHour = currentTime.hours();
-    var timeBlock = $(".row");
+    var timeBlock = $(".time-block");
     for(var i = 0; i < timeBlock.length; i++){
         var block = timeBlock[i];
         if(parseInt(block.id.split("-")[0]) < currentHour){
@@ -40,9 +42,9 @@ function checkTimeBlock(){
 $(".saveBtn").on("click", saveClick);
 
 //Save input to local storage
-function saveClick(e){
-    var text = $(e.target).siblings(".description").val();
-    var time = $(e.target).parent().attr("id");
+function saveClick(event){
+    var text = $(event.target).siblings(".content").val();
+    var time = $(event.target).parent().attr("id");
 
     if(text === "")
         alert("Type text into the field to save it on the calendar")
@@ -57,7 +59,7 @@ function saveClick(e){
 $(".clearBtn").on("click", clearClick);
 
 //Save input to local storage
-function clearClick(e){
+function clearClick(event){
     
     var clear = confirm("Are you sure you want to clear your day calendar");
 
@@ -70,13 +72,13 @@ function clearClick(e){
 
 //Load data from local storage to each time block
 function loadData(){ 
-    $('#9 .description').val(localStorage.getItem('9'));
-    $('#10 .description').val(localStorage.getItem('10'));
-    $('#11 .description').val(localStorage.getItem('11'));
-    $('#12 .description').val(localStorage.getItem('12'));
-    $('#13 .description').val(localStorage.getItem('13'));
-    $('#14 .description').val(localStorage.getItem('14'));
-    $('#15 .description').val(localStorage.getItem('15'));
-    $('#16 .description').val(localStorage.getItem('16'));
-    $('#17 .description').val(localStorage.getItem('17'));
+    $('#9 .content').val(localStorage.getItem('9'));
+    $('#10 .content').val(localStorage.getItem('10'));
+    $('#11 .content').val(localStorage.getItem('11'));
+    $('#12 .content').val(localStorage.getItem('12'));
+    $('#13 .content').val(localStorage.getItem('13'));
+    $('#14 .content').val(localStorage.getItem('14'));
+    $('#15 .content').val(localStorage.getItem('15'));
+    $('#16 .content').val(localStorage.getItem('16'));
+    $('#17 .content').val(localStorage.getItem('17'));
 }
