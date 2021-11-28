@@ -42,7 +42,7 @@ function checkTimeBlock(){
 $(".saveBtn").on("click", handleSaveClick);
 
 function handleSaveClick(e){
-    var text = $(e.target).siblings(".content").val();
+    var text = $(e.target).siblings(".description").val();
     var time = $(e.target).parent().attr("id");
 
     if(text === "")
@@ -71,19 +71,19 @@ function handleClearClick(e){
 
 //Load data from local storage to each time block
 function loadData(){ 
-    $('#7 .content').val(localStorage.getItem('7'));
-    $('#8 .content').val(localStorage.getItem('8'));
-    $('#9 .content').val(localStorage.getItem('9'));
-    $('#10 .content').val(localStorage.getItem('10'));
-    $('#11 .content').val(localStorage.getItem('11'));
-    $('#12 .content').val(localStorage.getItem('12'));
-    $('#13 .content').val(localStorage.getItem('13'));
-    $('#14 .content').val(localStorage.getItem('14'));
-    $('#15 .content').val(localStorage.getItem('15'));
-    $('#16 .content').val(localStorage.getItem('16'));
-    $('#17 .content').val(localStorage.getItem('17'));
-    $('#18 .content').val(localStorage.getItem('18'));
-    $('#19 .content').val(localStorage.getItem('19'));
-    $('#20 .content').val(localStorage.getItem('20'));
-    $('#21 .content').val(localStorage.getItem('21'));
+    $('#7 .description').val(localStorage.getItem('7'));
+    $('#8 .description').val(localStorage.getItem('8'));
+    $('#9 .description').val(localStorage.getItem('9'));
+    $('#10 .description').val(localStorage.getItem('10'));
+    $('#11 .description').val(localStorage.getItem('11'));
+    $('#12 .description').val(localStorage.getItem('12'));
+    $('#13 .description').val(localStorage.getItem('13'));
+    $('#14 .description').val(localStorage.getItem('14'));
+    $('#15 .description').val(localStorage.getItem('15'));
+    $('#16 .description').val(localStorage.getItem('16'));
+    $('#17 .description').val(localStorage.getItem('17'));
+    $('#18 .description').val(localStorage.getItem('18'));
+    $('#19 .description').val(localStorage.getItem('19'));
+    $('#20 .description').val(localStorage.getItem('20'));
+    $('#21 .description').val(localStorage.getItem('21'));
 }
