@@ -7,7 +7,22 @@ timeClock();
 //Load data from start
 loadData();
 
-//Set interval to constantly update time
+//Clear button click listener/function
+$(".clearBtn").on("click", handleClearClick);
+
+//Save input to local storage
+function handleClearClick(e) {
+
+    var clear = confirm("Click OK if you would like to clear the schedule");
+
+    if (clear) {
+        localStorage.clear();
+        loadData();
+    }
+
+}
+
+//Set interval to update live time
 var clock = setInterval(timeClock, 1600)
 
 //Set current time to user local time and check time blocks
@@ -54,20 +69,6 @@ function handleSaveClick(e) {
 
 }
 
-//Clear button click listener/function
-$(".clearBtn").on("click", handleClearClick);
-
-//Save input to local storage
-function handleClearClick(e) {
-
-    var clear = confirm("Click ok if you would like to clear the schedule");
-
-    if (clear) {
-        localStorage.clear();
-        loadData();
-    }
-
-}
 
 //local storage for each time block (24hr clock) starting at 7am-9pm
 function loadData() {
