@@ -4,5 +4,5 @@
 
 ### Site Preview: ![Schedule](https://github.com/adunderwood96/work-day-scheduler/blob/6a794b06073ce69130e3014fe2c95995d79fb79c/assets/images/schedule.png)
 
-### Site Location: https://adunderwood96.github.io/work-day-scheduler/
+### Site Location: https://apark8496.github.io/work-day-scheduler/
 
